@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Unna:ital,wght@0,400;1,700&display=swap');
+
+:root {
+    --background-sure: #F3EAE8;
+    --background-dark: #E5D8D5;
+    --color-sure: #ECE45A;
+    --color-dark: #B3DC4B;
+    --font-text: 'Unna', serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+.page {
+    position: relative;
+    height: 100vh;
+
+}
+.container {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(4, auto) / repeat(2 auto);
+    grid-template-areas: 
+    "nav    nav"
+    "aside   aside"
+    "main   main"
+    "footer footer";
+
+}
+
+/* .loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(112, 71, 71);
+    z-index: 20;
+
+    animation: loader 2s linear forwards;
+}
+    
+
+    @keyframes loader {
+        0% {
+           opacity: 1;
+           visibility: visible;
+        }
+        50% {
+            opacity: 1;
+           visibility: visible;
+        }
+        100% {
+            opacity: 0;
+           visibility: hidden;
+        }
+    }
+
+    .loader div {
+        width: 40px;
+        height: 40px;
+        background-color: rgb(7, 176, 255);
+        border-radius: 50%;
+        margin: 10px;
+
+        
+        transform: scale(0);
+        animation: scaling 2s ease-in-out infinite;
+    }
+
+        .loader div:nth-child(1) {
+            animation-delay: .2s;
+        }
+        .loader div:nth-child(2) {
+            animation-delay: .4s;
+        }
+        .loader div:nth-child(3) {
+            animation-delay: .6s;
+        }
+
+    @keyframes scaling {
+        0%, 100%  {
+            transform: scale(1);
+        }
+        50% {
+            
+            transform: scale(.2);
+        }
+    } */
+
+    .navbar {
+        grid-area: nav;
+        background-color: tomato;
+    }
+    .main__content {
+        grid-area: main;
+        background-color:rgb(126, 71, 126);
+    }
+    .aside__content {
+        grid-area: aside;
+        background-color:rgb(111, 216, 155);
+    }
+    .footer__content {
+        grid-area: footer;
+        background-color:rgb(230, 151, 78);
+    }
