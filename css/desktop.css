@@ -1,5 +1,5 @@
 
-
+@import url(/css/modal.css);
 body {
     overflow: hidden;
 }
@@ -42,8 +42,11 @@ body {
         font-weight: 400;
         font-size: 24px;
         width: 450px;
+       
     }
-
+    .navbar__content ul li {
+        cursor: pointer;
+    }
 
 
 .aside__content {
@@ -123,16 +126,42 @@ body {
 
 }
 
-    .kiwi {
-        bottom: 20px;
+    .fruits {
+        width: 80%;
+        bottom: 0px;
     }
-    .pear {
-        bottom: 60px;
-       
+    .vegetables {
+        width: 100%;
+        bottom: 40px;
+        left: -20px;
     }
-    .pineapple {
-        bottom: 100px;
+    .hierbas {
+        width: 100%;
+        bottom: 30px;
         right: 15px;
     }
 
 
+    .modal__content {
+        border-radius: 20px;
+        background-color: rgba(69, 228, 153, 0.829);
+        width: 45%;
+        height: 60%;
+        z-index: -2;
+        box-shadow: var(--box-shadow);   
+    
+        
+    }
+    .modal__content--slider {
+        width: 550px;
+        height: 240px;
+    
+        
+    }
+    .card {
+        width: 200px;
+        height: 250px;
+        
+        
+    }
+    

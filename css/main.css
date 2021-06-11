@@ -4,9 +4,10 @@
 :root {
     --background-sure: #F3EAE8;
     --background-dark: #E5D8D5;
-    --color-sure: #ECE45A;
+    --color-sure: #e7e27c;
     --color-dark: #B3DC4B;
     --font-text: 'Unna', serif;
+    --box-shadow: 5px 5px 15px 0px #2e2e2e;
 }
 
 
@@ -17,8 +18,9 @@
 }
 
 body {
-    background-color: var(--background-sure);
- 
+    background: rgb(243,234,232);
+    background: linear-gradient(120deg, #F3EAE8 10%, #c9bcb9 90%);
+
 }
 .page {
     position: relative;
@@ -109,6 +111,7 @@ p {
         .navbar__content .icon {
             font-size: 30px;
             color: rgba(0, 0, 0, 0.651);
+            cursor: pointer;
     
         }
         .navbar__content ul {
@@ -178,7 +181,7 @@ p {
             flex-direction: column;
             height: 380px;
             padding: 25px;
-            
+        
             animation: 2s main__content 0.5s ease-in-out;
 
         }
@@ -222,13 +225,16 @@ p {
         position: relative;
         width: 158px;
         height: 158px;
+
+        transform: translateY(0px) scale(1);
+        transition: transform 0.5s ease-in-out;
     }
     .plates {
         width: 95%;
 
         z-index: 1;
     }
-    .fruits {
+    .products {
         position: absolute;
         top: 0;
         left: 0;
@@ -237,31 +243,41 @@ p {
         margin: auto;
         z-index: 10; 
         
-        transform: translateY(0px) scale(1);
-        transition: transform 0.5s ease-in-out;
+        transition: transform .8s ease-in-out;      
+
     }
-    .fruits:hover {
+    .products:hover {
         cursor: pointer;
         transform: translateY(-20px) scale(1.1);
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.5s ease-in-out;
     }
-        .kiwi {
+        .fruits {
             width: 70%;
-            bottom: 85px;
+            bottom: 70px;
+           
+
         }
-        .pear {
-            width: 65%;
-            bottom: 110px;
+        .vegetables {
+            width: 80%;
+            bottom: 80px;
+            right: 20px;
            
         }
-        .pineapple {
+        .hierbas {
             width: 80%;
-            bottom: 140px;
-            right: 15px;
+            bottom: 80px;
+            right: 5px;
         }
     
-    
-    
+    .hidden {
+        display: none ;
+        
+    }
+    .visible {
+        display: none ;
+        
+    }
+
 
         /* Animations */
         @keyframes navbar {
@@ -305,6 +321,7 @@ p {
                 transform: translateY(0);
             }
         }
+       
 
     @keyframes loader {
         0% {
@@ -331,3 +348,15 @@ p {
             transform: scale(.2);
         }
     }
+
+
+
+    
+
+
+
+
+
+
+      
+        

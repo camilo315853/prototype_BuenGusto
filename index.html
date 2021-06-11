@@ -49,20 +49,20 @@
  
         <div class="position__img">
             <img class="plates" src="/img/plato.svg" alt="">
-            <img class="fruits kiwi" src="/img/Kiwi.svg" alt="">
+            <img id="button__one" class="products fruits" src="/img/fruits.svg" alt="fruits">
         </div>
 
 
    
         <div class="position__img">
             <img class="plates" src="/img/plato.svg" alt="">
-            <img class="fruits pear" src="/img/Pera.svg" alt="">
+            <img id="button__two" class="products vegetables" src="/img/vegetables.svg" alt="vegetables">
         </div>
   
 
         <div class="position__img">
             <img class="plates" src="/img/plato.svg" alt="">
-            <img class="fruits pineapple" src="/img/Piña.svg" alt="">
+            <img id="button__three" class="products hierbas" src="/img/hierbas.svg" alt="Hierbas">
         </div>
   
     </section>
@@ -74,9 +74,91 @@
        <div></div>
        <div></div>
     </section>
+   
 
     <!-- Modal -->
-    <section></section>
+    <section class="modal__one hidden ">
+        <div class="modal__content">
+            <i class="modal__content--close fas fa-times"></i>
+            
+            <div class="modal__content--slider">
+                <input type="radio" name="slider-1" id="radio-1" checked>
+                <input type="radio" name="slider-1" id="radio-2">
+                <input type="radio" name="slider-1" id="radio-3">
+                
+                <div class="cards">
+                    <label for="radio-1" id="card-1" class="card">
+                        <img class="card__fruits mangostinos" src="/img/mangostinos.svg" alt="mangostinos">
+                    </label>
+                    
+                    <label for="radio-2" id="card-2" class="card">
+                        <img class="card__fruits tangelo" src="/img/tangelo.svg" alt="tangelo">
+                    </label>
+                    <label for="radio-3" id="card-3" class="card">
+                        <img class="card__fruits piña" src="/img/piña.svg" alt="piña">
+                    </label>
+                </div>
+              
+            </div>
+            <a class="modal__button">Me lo llevo</a>
+        </div>
+    </section>
+
+    <section class="modal__two hidden ">
+        <div class="modal__content">
+            <i class="modal__content--close2 fas fa-times"></i>
+            
+            <div class="modal__content--slider">
+                <input type="radio" name="slider-2" id="radio__two-1" checked>
+                <input type="radio" name="slider-2" id="radio__two-2">
+                <input type="radio" name="slider-2" id="radio__two-3">
+                
+                <div class="cards">
+                    <label for="radio__two-1" id="card__two-1" class="card">
+                        <img class="card__fruits pimenton" src="/img/pimenton.svg" alt="pimenton">
+                    </label>
+                    
+                    <label for="radio__two-2" id="card__two-2" class="card">
+                        <img class="card__fruits tomate" src="/img/tomate.svg" alt="tomate">
+                    </label>
+                    <label for="radio__two-3" id="card__two-3" class="card">
+                        <img class="card__fruits brocoli" src="/img/Brocoli.svg" alt="brocoli">
+                    </label>
+                </div>
+              
+            </div>
+            <a class="modal__button">Me lo llevo</a>
+        </div>
+    </section>
+
+    <section class="modal__three hidden ">
+        <div class="modal__content">
+            <i class="modal__content--close3 fas fa-times"></i>
+            
+            <div class="modal__content--slider">
+                <input type="radio" name="slider-3" id="radio__three-1" checked>
+                <input type="radio" name="slider-3" id="radio__three-2">
+                <input type="radio" name="slider-3" id="radio__three-3">
+                
+                <div class="cards">
+                    <label for="radio__three-1" id="card__three-1" class="card">
+                        <img class="card__fruits perejil" src="/img/perejil.svg" alt="perejil">
+                    </label>
+                    
+                    <label for="radio__three-2" id="card__three-2" class="card">
+                        <img class="card__fruits tomillo" src="/img/tomillo.svg" alt="tomillo">
+                    </label>
+                    <label for="radio__three-3" id="card__three-3" class="card">
+                        <img class="card__fruits ruvolla" src="/img/ruvolla.svg" alt="ruvolla">
+                    </label>
+                </div>
+              
+            </div>
+            <a class="modal__button">Me lo llevo</a>
+        </div>
+    </section>
 </div>
+
+<script src="/JS/main.js"></script>
 </body>
 </html>
