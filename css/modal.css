@@ -1,0 +1,209 @@
+            /* Modal */
+
+            .hidden {
+                display: none ;
+                
+            }
+            .visible {
+                display: grid ;
+                
+            }
+        
+            .modal__one,
+            .modal__two,
+            .modal__three {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                position: absolute;
+                z-index: 100;
+                place-items: center;
+                
+            }
+        
+                .modal__content {
+                    display: grid;
+                    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+                    place-items: center;
+                    border-radius: 20px;
+                    width: 50%;
+                    height: 50%;
+                    
+                
+                    
+                }
+                .modal__content--close,
+                .modal__content--close2,
+                .modal__content--close3  {
+                    grid-column: 4 / span 1;
+                    grid-row: 1 / span 1;
+                    font-size: 30px;
+                    cursor: pointer;
+                    color: black;
+                    place-self: end;
+                    align-self: start;
+                    margin: 10px;
+                    opacity: 80%;
+                }
+                .modal__content--close:hover,
+                .modal__content--close2:hover,
+                .modal__content--close3:hover {
+                    opacity: 100%;
+                }  
+                
+                .modal__content--slider {
+                    grid-column: 1 / span 4;
+                    grid-row: 1 / span 3;
+                    width: 300px;
+                    height: 200px;
+                    transform-style: preserve-3d;
+                }
+                .modal__content--slider input {
+                    visibility: hidden;
+                }
+                
+                .cards {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+                .card {
+                    border-radius: 50px;
+                    box-shadow: var(--box-shadow);
+                    background-color: var(--background-dark);
+                    position: absolute;
+                    width: 150px;
+                    height: 150px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    transition: all .8s ease-in-out;
+                    cursor: pointer;
+                    display: grid;
+                    place-items: center;
+                }
+                .card__fruits {
+                    width: 80%;
+                    position: absolute;
+        
+                }
+                .pimenton,
+                .tomate {
+                    left: -20px;
+                    width: 100%;
+                }
+               
+        
+        
+        
+                /* Slides one */
+                #radio-1:checked ~ .cards #card-1,
+                #radio-2:checked ~ .cards #card-2,
+                #radio-3:checked ~ .cards #card-3 {
+                    transform: translateX(0) scale(1);
+                    opacity: 1;
+                    z-index: 1;
+        
+                }
+                #radio-1:checked ~ .cards #card-2,
+                #radio-2:checked ~ .cards #card-3,
+                #radio-3:checked ~ .cards #card-1 {
+                    transform: translateX(80%) scale(0.8);
+                    opacity: 0.7;
+                    z-index: 0;
+                }
+                #radio-1:checked ~ .cards #card-3,
+                #radio-2:checked ~ .cards #card-1,
+                #radio-3:checked ~ .cards #card-2 {
+                    transform: translateX(-80%) scale(0.8);
+                    opacity: 0.7;
+                    z-index: 0;
+                }
+               
+                /* Slides two */
+                #radio__two-1:checked ~ .cards #card__two-1,
+                #radio__two-2:checked ~ .cards #card__two-2,
+                #radio__two-3:checked ~ .cards #card__two-3 {
+                    transform: translateX(0) scale(1);
+                    opacity: 1;
+                    z-index: 1;
+                }
+                #radio__two-1:checked ~ .cards #card__two-2,
+                #radio__two-2:checked ~ .cards #card__two-3,
+                #radio__two-3:checked ~ .cards #card__two-1 {
+                    transform: translateX(80%) scale(0.8);
+                    opacity: 0.7;
+                    z-index: 0;
+                }
+                #radio__two-1:checked ~ .cards #card__two-3,
+                #radio__two-2:checked ~ .cards #card__two-1,
+                #radio__two-3:checked ~ .cards #card__two-2 {
+                    transform: translateX(-80%) scale(0.8);
+                    opacity: 0.7;
+                    z-index: 0;
+                }
+        
+        
+                 /* Slides three */
+                 #radio__three-1:checked ~ .cards #card__three-1,
+                 #radio__three-2:checked ~ .cards #card__three-2,
+                 #radio__three-3:checked ~ .cards #card__three-3 {
+                     transform: translateX(0) scale(1);
+                     opacity: 1;
+                     z-index: 1;
+                 }
+                 #radio__three-1:checked ~ .cards #card__three-2,
+                 #radio__three-2:checked ~ .cards #card__three-3,
+                 #radio__three-3:checked ~ .cards #card__three-1 {
+                     transform: translateX(80%) scale(0.8);
+                     opacity: 0.7;
+                     z-index: 0;
+                 }
+                 #radio__three-1:checked ~ .cards #card__three-3,
+                 #radio__three-2:checked ~ .cards #card__three-1,
+                 #radio__three-3:checked ~ .cards #card__three-2 {
+                     transform: translateX(-80%) scale(0.8);
+                     opacity: 0.7;
+                     z-index: 0;
+                 }
+        
+                 .modal__button {
+                    grid-column: 2 / span 2;
+                    grid-row: 4 / span 1; 
+                    position: relative;
+                    border-radius: 15px;            
+                    font-family: var(--font-text);
+                    font-weight: bold;
+                    opacity: 80%;
+                    font-size: 22px;
+                    padding: 10px 25px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    z-index: -2;
+                    background-color: var(--background-sure);
+                    box-shadow:  var(--box-shadow);
+                    transition: 1s all ease;
+                    
+              }
+              .modal__button:hover { 
+                  transform: scale(1.2);
+                  transition: .5s all ease;
+                  opacity: 100%;
+              }
+              .modal__button::before{
+                background: var(--background-dark);
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) rotate(-45deg);
+                z-index: -1;
+                transition: all 0.6s ease;
+                width: 100%;
+                height: 0%;
+              }
+              .modal__button:hover:before{
+                height: 380%;
+              
+              }
+              
